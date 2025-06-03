@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'PT Sans', sans-serif; /* Default body font */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* Default headline font */
+}
+
+@layer base {
+  :root {
+    --background: 210 17% 98%; /* Off-White: #F7F9F9 */
+    --foreground: 223 47% 30%; /* Dark Slate Blue: #263C6F */
+
+    --card: 210 17% 98%; /* Off-White */
+    --card-foreground: 223 47% 30%; /* Dark Slate Blue */
+
+    --popover: 210 17% 98%; /* Off-White */
+    --popover-foreground: 223 47% 30%; /* Dark Slate Blue */
+
+    --primary: 153 69% 42%; /* Emerald Green: #1DBA6F */
+    --primary-foreground: 153 60% 96%; /* Light shade for text on primary */
+
+    --secondary: 223 47% 90%; /* Lighter Slate Blue */
+    --secondary-foreground: 223 47% 30%; /* Dark Slate Blue */
+
+    --muted: 223 47% 95%; /* Very Light Slate Blue / Greyish */
+    --muted-foreground: 223 47% 50%; /* Muted Dark Slate Blue */
+
+    --accent: 43 94% 74%; /* Warm Yellow: #FBD97E */
+    --accent-foreground: 223 47% 20%; /* Darker Slate Blue for text on accent */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 223 30% 88%; /* Light greyish blue border */
+    --input: 223 30% 92%; /* Lighter input background */
+    --ring: 153 69% 42%; /* Emerald Green for focus rings */
+
+    --chart-1: 153 69% 42%;
+    --chart-2: 43 94% 74%;
+    --chart-3: 223 47% 50%;
+    --chart-4: 153 50% 60%;
+    --chart-5: 43 80% 80%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific theme */
+    --sidebar-background: 223 47% 25%; /* Darker Slate Blue for sidebar */
+    --sidebar-foreground: 210 20% 92%; /* Off-white/light grey text */
+    --sidebar-primary: 153 69% 55%; /* Brighter Emerald Green for active/hover */
+    --sidebar-primary-foreground: 210 20% 98%; /* White text on sidebar primary */
+    --sidebar-accent: 223 47% 35%; /* Slightly lighter Dark Slate Blue for hover */
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 223 47% 20%; /* Darker border for sidebar elements */
+    --sidebar-ring: 153 69% 55%;
+  }
+
+  .dark {
+    /* Keeping dark theme variables for completeness, but focusing on light theme */
+    --background: 223 47% 15%; /* Dark Slate Blue (darker variant) */
+    --foreground: 210 17% 90%; /* Light Grey */
+
+    --card: 223 47% 20%;
+    --card-foreground: 210 17% 90%;
+
+    --popover: 223 47% 15%;
+    --popover-foreground: 210 17% 90%;
+
+    --primary: 153 69% 50%; /* Emerald Green (slightly brighter for dark) */
+    --primary-foreground: 223 47% 10%; 
+
+    --secondary: 223 47% 25%;
+    --secondary-foreground: 210 17% 90%;
+
+    --muted: 223 47% 25%;
+    --muted-foreground: 210 17% 70%;
+
+    --accent: 43 94% 65%; /* Warm Yellow (slightly desaturated/darker) */
+    --accent-foreground: 223 47% 10%;
+
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 223 47% 30%;
+    --input: 223 47% 30%;
+    --ring: 153 69% 50%;
+
+    --chart-1: 153 69% 50%;
+    --chart-2: 43 94% 65%;
+    --chart-3: 223 47% 60%;
+    --chart-4: 153 50% 70%;
+    --chart-5: 43 80% 70%;
+        
+    --sidebar-background: 223 47% 10%; 
+    --sidebar-foreground: 210 17% 85%;
+    --sidebar-primary: 153 69% 55%; 
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 223 47% 20%;
+    --sidebar-accent-foreground: 210 17% 90%;
+    --sidebar-border: 223 47% 15%;
+    --sidebar-ring: 153 69% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Subtle scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background) / 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.7);
+}
