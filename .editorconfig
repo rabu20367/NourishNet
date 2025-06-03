@@ -1,0 +1,171 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false
+
+# JSON files
+[*.json]
+indent_size = 2
+
+# YAML files
+[*.{yml,yaml}]
+indent_size = 2
+
+# Shell scripts
+[*.sh]
+indent_size = 2
+
+# Makefiles use real tabs
+[Makefile]
+indent_style = tab
+
+# Batch files use CRLF
+[*.{cmd,bat}]
+end_of_line = crlf
+
+# Windows-specific files
+[*.{cmd,bat,ps1}]
+end_of_line = crlf
+
+# Docker files
+[Dockerfile*]
+indent_size = 4
+
+# Git ignore files
+[.gitignore]
+indent_size = 2
+
+# Editor specific files
+[.vscode/*]
+indent_size = 2
+
+# Next.js specific
+[.next/**/*]
+indent_size = 2
+
+# JavaScript and TypeScript files
+[*.{js,jsx,ts,tsx}]
+indent_size = 2
+
+# CSS, SCSS, and PostCSS files
+[*.{css,scss,postcss}]
+indent_size = 2
+
+# HTML files
+[*.html]
+indent_size = 2
+
+# Configuration files
+[*.{json,eslintrc,prettierrc,babelrc}]
+indent_size = 2
+
+# Markdown documentation
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
+
+# XML files
+[*.xml]
+indent_size = 2
+
+# YAML files
+[*.yaml,*.yml]
+indent_size = 2
+
+# GraphQL files
+[*.graphql]
+indent_size = 2
+
+# SQL files
+[*.sql]
+indent_size = 4
+
+# Shell scripts
+[*.sh]
+indent_size = 2
+
+# Git configuration
+[.gitattributes]
+indent_size = 2
+
+# Editor configuration
+[.editorconfig]
+indent_size = 2
+
+# NPM configuration
+[package*.json]
+indent_size = 2
+
+# TypeScript configuration
+[tsconfig*.json]
+indent_size = 2
+
+# ESLint configuration
+[.eslintrc*]
+indent_size = 2
+
+# Prettier configuration
+[.prettier*]
+indent_size = 2
+
+# GitHub workflow files
+[.github/workflows/*.yaml]
+indent_size = 2
+
+# Docker Compose files
+[docker-compose*.yml]
+indent_size = 2
+
+# Environment files
+[.env*]
+indent_style = space
+indent_size = 2
+
+# Documentation
+[README*]
+trim_trailing_whitespace = false
+
+# License files
+[LICENSE*]
+trim_trailing_whitespace = false
+
+# Git related
+[.git*]
+indent_size = 2
+
+# Editor specific
+[.vscode/*]
+indent_size = 2
+
+# VS Code settings
+[.vscode/settings.json]
+indent_size = 2
+
+# VS Code extensions
+[.vscode/extensions.json]
+indent_size = 2
+
+# VS Code launch configuration
+[.vscode/launch.json]
+indent_size = 2
+
+# VS Code tasks
+[.vscode/tasks.json]
+indent_size = 2
+
+# VS Code workspace settings
+[*.code-workspace]
+indent_size = 2

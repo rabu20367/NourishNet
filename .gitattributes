@@ -1,0 +1,119 @@
+# Auto detect text files and perform LF normalization
+* text=auto eol=lf
+
+# Source code files
+*.js text diff=javascript
+*.jsx text diff=javascript
+*.ts text diff=typescript
+*.tsx text diff=typescript
+*.json text
+*.md text
+*.yml text
+*.yaml text
+*.html text
+*.css text
+*.scss text
+*.sass text
+*.less text
+*.svg text
+*.graphql text
+*.gql text
+
+# Binary files that should not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.bz2 binary
+*.7z binary
+*.mp3 binary
+*.mp4 binary
+*.wav binary
+*.mov binary
+*.avi binary
+*.mkv binary
+*.webm binary
+*.webp binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.ppt binary
+*.pptx binary
+*.pdf binary
+
+# Platform specific files
+.gitattributes export-ignore
+.gitignore export-ignore
+.editorconfig export-ignore
+.eslintignore export-ignore
+.prettierignore export-ignore
+
+# Dependency directories
+node_modules/ export-ignore
+
+# Build outputs
+/dist
+/build
+/.next
+/out
+/.vercel
+/.now
+
+# Environment files (can be committed for development, but not for production)
+.env*.local
+!.env.example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing
+/coverage
+.nyc_output
+
+# Local development
+.turbo
+.temp
+.tmp
+temp
+
+# Misc
+.cache
+.vercel
+.netlify
+
+# Lock files (should be committed)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
