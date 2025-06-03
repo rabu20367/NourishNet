@@ -58,7 +58,6 @@ export default function AiMatchPage() {
         description: `Match probability: ${(result.matchProbability * 100).toFixed(0)}%`,
       });
     } catch (error) {
-      console.error("Error matching donation:", error);
       toast({
         title: "Error",
         description: "Could not perform match analysis. Please try again.",
