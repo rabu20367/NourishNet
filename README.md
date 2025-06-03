@@ -1,3 +1,5 @@
+![NourishNet Official Logo](src/components/icons/NourishNet_offical_logo.png)
+
 # NourishNet 🌱
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
