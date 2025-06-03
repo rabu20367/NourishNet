@@ -54,11 +54,10 @@ export default function VolunteerSignupPage() {
   });
 
   function onSubmit(data: VolunteerSignupFormValues) {
-    console.log(data);
     toast({
       title: "Signup Successful!",
       description: `Thank you for signing up, ${data.name}. We'll be in touch.`,
-      variant: "default", 
+      variant: "default",
     });
     form.reset();
   }
