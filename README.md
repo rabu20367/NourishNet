@@ -31,6 +31,8 @@ NourishNet is a food donation and redistribution platform that connects food don
 - npm (v9+) or yarn (v1.22+)
 - Git 2.25.0 or later
 
+The Next.js source code resides in `Frontend/`. The primary `package.json` is in `Backend/`, so run `npm` commands from there.
+
 ### Installation
 
 1. **Clone the repository**
@@ -60,15 +62,21 @@ an `annotations.json` file describing each image. After training, a scripted mod
 In production the API flow invokes `cv-model/predict.py` to analyze uploaded images and returns structured
 data like `{ "foodType": "carrots", "estimatedWeightKg": 2.0, "spoilageDetected": false, "packagingOk": true }`.
 
-2. **Install dependencies**
+2. **Change into the `Backend` directory**
 
+   ```bash
+   cd Backend
+   ```
+
+3. **Install dependencies** (run inside `Backend`)
+   
    ```bash
    npm install
    # or
    yarn install
    ```
 
-3. **Set up environment variables**
+4. **Set up environment variables**
 
    ```bash
    cp .env.example .env.local
@@ -86,7 +94,7 @@ data like `{ "foodType": "carrots", "estimatedWeightKg": 2.0, "spoilageDetected"
    NEXTAUTH_URL=http://localhost:3000
    ```
 
-4. **Run the development server**
+5. **Run the development server** (from `Backend`)
 
    ```bash
    npm run dev
@@ -94,7 +102,7 @@ data like `{ "foodType": "carrots", "estimatedWeightKg": 2.0, "spoilageDetected"
    yarn dev
    ```
 
-5. **Open your browser**
+6. **Open your browser**
    Visit [http://localhost:3000](http://localhost:3000) to see the application running.
 
 ## 🛠️ Tech Stack
@@ -123,39 +131,20 @@ data like `{ "foodType": "carrots", "estimatedWeightKg": 2.0, "spoilageDetected"
 
 ```
 .
-├── .github/             # GitHub workflows and issue templates
-├── public/              # Static files
-├── src/
-│   ├── app/            # App router pages and layouts
-│   │   ├── api/         # API routes
-│   │   ├── auth/        # Authentication pages
-│   │   ├── dashboard/   # User dashboard
-│   │   ├── donor/       # Donor-specific pages
-│   │   ├── volunteer/   # Volunteer-specific pages
-│   │   └── page.tsx     # Home page
-│   ├── components/      # Reusable UI components
-│   │   ├── ui/          # Shadcn/ui components
-│   │   ├── forms/       # Form components
-│   │   ├── layout/      # Layout components
-│   │   └── shared/      # Shared components
-│   ├── config/          # App configuration
-│   ├── hooks/           # Custom React hooks
-│   ├── lib/             # Utilities and helpers
-│   │   ├── api/         # API clients
-│   │   ├── constants/   # App constants
-│   │   └── utils/       # Utility functions
-│   ├── providers/       # Context providers
-│   ├── styles/          # Global styles and themes
-│   └── types/           # TypeScript type definitions
-├── .editorconfig        # Editor configuration
-├── .eslintrc.json       # ESLint configuration
-├── .gitignore          # Git ignore rules
-├── .prettierrc         # Prettier configuration
-├── next.config.mjs     # Next.js configuration
-├── package.json        # Project dependencies and scripts
-├── postcss.config.mjs  # PostCSS configuration
-├── tailwind.config.ts  # Tailwind CSS configuration
-└── tsconfig.json      # TypeScript configuration
+├── Backend/             # Next.js backend and package.json
+│   ├── package.json
+│   └── src_ai/          # ML and Genkit flows
+├── Frontend/            # Next.js application source
+│   ├── src_app/         # App router pages and layouts
+│   ├── src_components/  # Reusable UI components
+│   ├── src_hooks/       # Custom React hooks
+│   ├── src_lib/         # Shared utilities
+│   └── next.config.ts   # Next.js configuration
+├── docs/                # Documentation
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+└── SECURITY.md
 ```
 
 ## 🧪 Testing
