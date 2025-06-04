@@ -34,4 +34,4 @@ jobs:
           python Backend/src_ai/predictive-matching/train_model.py data/training/sample.csv
       - name: Evaluate models
         run: |
-          echo "TODO: Add evaluation scripts"
+          python Backend/src_ai/forecasting/evaluate_models.py
