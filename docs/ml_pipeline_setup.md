@@ -32,4 +32,11 @@ This document explains how to reproduce the machine learning workflows locally o
    python Backend/src_ai/predictive-matching/train_model.py <path-to-training-csv>
    ```
 
+5. **Evaluate trained models**
+   ```bash
+   python Backend/src_ai/forecasting/evaluate_models.py
+   ```
+
+   Customize thresholds with the `FORECAST_MAE_THRESHOLD` and `PREDICT_ACC_THRESHOLD` environment variables if needed.
+
 These steps mirror the automation performed in `.github/workflows/ml_pipeline.yml` so contributors can reproduce the pipeline locally.
