@@ -78,7 +78,7 @@ const nextConfig: NextConfig = {
   },
 
   // Webpack configuration
-  webpack: (config, { isServer, dev }) => {
+  webpack: (config, { dev }) => {
     // Only run these optimizations in production
     if (!dev) {
       // Enable tree shaking
