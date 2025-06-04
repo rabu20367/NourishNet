@@ -28,7 +28,7 @@ jobs:
             echo "drift=true" >> $GITHUB_OUTPUT
           fi
       - name: Train models if drift detected
-        if: "${{ steps.drift.outputs.drift == true }}"
+        if: steps.drift.outputs.drift == 'true'
         run: |
           python Backend/src_ai/forecasting/train_forecasting.py
           python Backend/src_ai/predictive-matching/train_model.py data/training/sample.csv
