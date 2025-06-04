@@ -1,0 +1,5 @@
+{
+  "distance_km": {"mean": 5.0, "std": 2.0},
+  "is_perishable": {"mean": 0.5},
+  "requested_hour": {"mean": 14.0, "std": 3.0}
+}

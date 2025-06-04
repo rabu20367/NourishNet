@@ -1,0 +1,31 @@
+name: ML Pipeline
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-and-train:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install Python dependencies
+        run: |
+          pip install -r Backend/src_ai/forecasting/requirements.txt
+          pip install google-cloud-firestore prophet pandas tensorflow
+      - name: Check data drift
+        id: drift
+        run: |
+          python Backend/src_ai/monitoring/check_drift.py || echo "drift=true" >> $GITHUB_OUTPUT
+      - name: Train models if drift detected
+        if: steps.drift.outputs.drift == 'true'
+        run: |
+          python Backend/src_ai/forecasting/train_forecasting.py
+          python Backend/src_ai/predictive-matching/train_model.py data/training/sample.csv
+      - name: Evaluate models
+        run: echo "TODO: Add evaluation scripts"
