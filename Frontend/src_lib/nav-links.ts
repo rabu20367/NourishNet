@@ -1,5 +1,14 @@
-import type { LucideIcon } from 'lucide-react';
-import { MapPin, TrendingUp, LayoutDashboard, UserPlus, BrainCircuit, Settings, LogOut } from 'lucide-react';
+import type { LucideIcon } from "lucide-react";
+import {
+  MapPin,
+  TrendingUp,
+  LayoutDashboard,
+  UserPlus,
+  BrainCircuit,
+  BarChart2,
+  Settings,
+  LogOut,
+} from "lucide-react";
 
 export interface NavLink {
   href: string;
@@ -10,48 +19,54 @@ export interface NavLink {
 
 export const mainNavLinks: NavLink[] = [
   {
-    href: '/',
-    label: 'Live Map',
+    href: "/",
+    label: "Live Map",
     icon: MapPin,
-    tooltip: 'View Live Map (M)', // M for map if we use shortcuts
+    tooltip: "View Live Map (M)", // M for map if we use shortcuts
   },
   {
-    href: '/impact',
-    label: 'Impact',
+    href: "/impact",
+    label: "Impact",
     icon: TrendingUp,
-    tooltip: 'Impact Dashboard (I)',
+    tooltip: "Impact Dashboard (I)",
   },
   {
-    href: '/donor/dashboard',
-    label: 'Donor Hub',
+    href: "/forecast",
+    label: "Forecasts",
+    icon: BarChart2,
+    tooltip: "View Forecasts (F)",
+  },
+  {
+    href: "/donor/dashboard",
+    label: "Donor Hub",
     icon: LayoutDashboard,
-    tooltip: 'Donor Dashboard (D)',
+    tooltip: "Donor Dashboard (D)",
   },
   {
-    href: '/volunteer/signup',
-    label: 'Volunteer',
+    href: "/volunteer/signup",
+    label: "Volunteer",
     icon: UserPlus,
-    tooltip: 'Volunteer Signup (V)',
+    tooltip: "Volunteer Signup (V)",
   },
   {
-    href: '/ai/match',
-    label: 'AI Matching',
+    href: "/ai/match",
+    label: "AI Matching",
     icon: BrainCircuit,
-    tooltip: 'AI Donation Matching (A)',
+    tooltip: "AI Donation Matching (A)",
   },
 ];
 
 export const utilityNavLinks: NavLink[] = [
   {
-    href: '/settings',
-    label: 'Settings',
+    href: "/settings",
+    label: "Settings",
     icon: Settings,
-    tooltip: 'User Settings (S)',
+    tooltip: "User Settings (S)",
   },
   {
-    href: '/logout', // This would be an action, not a page for a real app
-    label: 'Logout',
+    href: "/logout", // This would be an action, not a page for a real app
+    label: "Logout",
     icon: LogOut,
-    tooltip: 'Logout',
+    tooltip: "Logout",
   },
 ];
