@@ -188,6 +188,12 @@ yarn test:coverage
 
 Please refer to our [Security Policy](SECURITY.md) for reporting vulnerabilities.
 
+## ⚙️ ML Pipelines
+
+Automation scripts for model training and data drift detection are located in `.github/workflows/ml_pipeline.yml`.
+See [docs/ml_pipeline_setup.md](docs/ml_pipeline_setup.md) for local setup instructions.
+
+
 ## 🤝 Contributing
 
 We welcome contributions from the community! Here's how you can help:
