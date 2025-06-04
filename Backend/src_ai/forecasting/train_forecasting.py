@@ -1,5 +1,5 @@
 import os
-from datetime import datetime, timedelta
+from datetime import datetime
 from typing import List
 
 from google.cloud import firestore
