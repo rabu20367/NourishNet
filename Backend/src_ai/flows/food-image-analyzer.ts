@@ -9,6 +9,8 @@
  */
 
 import {ai} from '@/ai/genkit';
+import {spawnSync} from 'child_process';
+import path from 'path';
 import {z} from 'genkit';
 
 const AnalyzeFoodImageInputSchema = z.object({
@@ -62,6 +64,19 @@ const analyzeFoodImageFlow = ai.defineFlow(
     outputSchema: AnalyzeFoodImageOutputSchema,
   },
   async input => {
+    const script = path.join(__dirname, '../cv-model/predict.py');
+    const model = path.join(__dirname, '../cv-model/food_image_model.pt');
+    try {
+      const result = spawnSync('python3', [script, model, input.photoDataUri], {
+        encoding: 'utf-8',
+      });
+      const out = result.stdout.trim();
+      if (out) {
+        return JSON.parse(out) as AnalyzeFoodImageOutput;
+      }
+    } catch (err) {
+      console.error('cv model error', err);
+    }
     const {output} = await prompt(input);
     return output!;
   }

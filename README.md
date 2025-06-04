@@ -49,6 +49,17 @@ Run the scheduler locally with:
 npm run forecast:cron
 ```
 
+## 🖼️ Computer Vision Model
+
+Labeled food photos can be used to train a lightweight PyTorch model that estimates the food type, weight,
+and checks for spoilage or packaging issues. The training script lives in
+`Backend/src_ai/cv-model/train_food_image_model.py` and expects an image directory and
+an `annotations.json` file describing each image. After training, a scripted model is stored at
+`Backend/src_ai/cv-model/food_image_model.pt`.
+
+In production the API flow invokes `cv-model/predict.py` to analyze uploaded images and returns structured
+data like `{ "foodType": "carrots", "estimatedWeightKg": 2.0, "spoilageDetected": false, "packagingOk": true }`.
+
 2. **Install dependencies**
 
    ```bash
