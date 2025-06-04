@@ -43,6 +43,12 @@ export const mainNavLinks: NavLink[] = [
     tooltip: "Donor Dashboard (D)",
   },
   {
+    href: "/volunteer/dashboard",
+    label: "Volunteer Hub",
+    icon: LayoutDashboard,
+    tooltip: "Volunteer Dashboard",
+  },
+  {
     href: "/volunteer/signup",
     label: "Volunteer",
     icon: UserPlus,
