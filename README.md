@@ -1,4 +1,4 @@
-![NourishNet Official Logo](src/components/icons/NourishNet_offical_logo.png)
+![NourishNet Official Logo](Frontend/src/components/icons/NourishNet_offical_logo.png)
 
 # NourishNet 🌱
 
