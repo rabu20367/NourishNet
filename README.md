@@ -241,7 +241,7 @@ Thanks to all the people who have contributed to NourishNet!
 
 ## 📬 Contact
 
-Project Maintainer: [Your Name] - [your.email@example.com](mailto:your.email@example.com)
+Project Maintainer: Hasibur Rashid - atm.hasibur.rashid20367@gmail.com
 
 Project Link: [https://github.com/rabu20367/NourishNet](https://github.com/rabu20367/NourishNet)
 
