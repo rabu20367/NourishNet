@@ -141,10 +141,10 @@ data like `{ "foodType": "carrots", "estimatedWeightKg": 2.0, "spoilageDetected"
 │   ├── package.json
 │   └── src_ai/          # ML and Genkit flows
 ├── Frontend/            # Next.js application source
-│   ├── src_app/         # App router pages and layouts
-│   ├── src_components/  # Reusable UI components
-│   ├── src_hooks/       # Custom React hooks
-│   ├── src_lib/         # Shared utilities
+│   ├── app/             # App router pages and layouts
+│   ├── src/components/  # Reusable UI components
+│   ├── src/hooks/       # Custom React hooks
+│   ├── src/lib/         # Shared utilities
 │   └── next.config.ts   # Next.js configuration
 ├── docs/                # Documentation
 ├── CODE_OF_CONDUCT.md
