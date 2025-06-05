@@ -47,19 +47,22 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         collapsible={hasMounted ? (isMobile ? "offcanvas" : "icon") : initialCollapsibleMode}
       >
         <SidebarHeader className="p-4 border-b border-sidebar-border">
-          <div className="flex items-center h-full group-data-[collapsible=icon]:justify-center">
-            {/* Full logo for expanded state */}
-            <Image
-              src="/nourishnet-logo.png"
-              alt="NourishNet Logo"
-              width={120} 
-              height={40} 
-              className="group-data-[collapsible=icon]:hidden" 
-            />
-            {/* Icon for collapsed state */}
-            <NourishNetPinIcon
-              className="hidden h-7 w-7 text-primary transition-transform duration-300 group-hover/sidebar-wrapper:rotate-[360deg] group-data-[collapsible=icon]:block" 
-            />
+          <div className="flex items-center h-20 px-3">
+            {/* Expanded logo */}
+            <div className="relative h-16 w-44 group-data-[collapsible=icon]:hidden">
+              <Image
+                src="/NourishNet_offical_logo.png"
+                alt="NourishNet Logo"
+                fill
+                sizes="176px"
+                className="object-contain"
+                priority
+              />
+            </div>
+            {/* Collapsed logo */}
+            <div className="hidden group-data-[collapsible=icon]:block">
+              <NourishNetPinIcon className="h-11 w-11" />
+            </div>
           </div>
         </SidebarHeader>
         <SidebarContent className="p-0">
@@ -81,7 +84,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                  <SidebarTrigger />
               </div>
             )}
-            <Image src="/nourishnet-logo.png" alt="NourishNet Logo" width={120} height={40} />
+            <div className="w-0 md:flex-1"></div> {/* Spacer that takes up space on md screens */}
           </div>
           <div className="flex items-center gap-4">
             <Button variant="ghost" size="icon" className="rounded-full">
