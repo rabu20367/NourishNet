@@ -75,11 +75,14 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
       <SidebarInset>
         <header className="sticky top-0 z-40 flex h-16 items-center justify-between gap-4 border-b bg-background/80 px-4 backdrop-blur-md md:px-6 md:justify-end">
-          {hasMounted && (
-            <div className="md:hidden">
-               <SidebarTrigger />
-            </div>
-          )}
+          <div className="flex items-center gap-2">
+            {hasMounted && (
+              <div className="md:hidden">
+                 <SidebarTrigger />
+              </div>
+            )}
+            <Image src="/nourishnet-logo.png" alt="NourishNet Logo" width={120} height={40} />
+          </div>
           <div className="flex items-center gap-4">
             <Button variant="ghost" size="icon" className="rounded-full">
               <Bell className="h-5 w-5" />
