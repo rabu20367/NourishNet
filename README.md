@@ -86,7 +86,7 @@ data like `{ "foodType": "carrots", "estimatedWeightKg": 2.0, "spoilageDetected"
 
    ```env
    # Required
-   NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=your_mapbox_token_here
+   NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
 
    # Optional (for production)
    NEXT_PUBLIC_SITE_URL=http://localhost:3000
@@ -117,7 +117,7 @@ data like `{ "foodType": "carrots", "estimatedWeightKg": 2.0, "spoilageDetected"
 - **Form Handling**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
 - **Icons**: [Lucide Icons](https://lucide.dev/)
 - **Data Visualization**: [Recharts](https://recharts.org/)
-- **Maps**: [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/)
+- **Maps**: [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript)
 
 ### Development Tools
 

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { PageHeader } from '@/components/page-header';
-import { MapPlaceholder } from '@/components/map-placeholder';
+import { GoogleMap } from '@/components/google-map';
 import { DonationCard } from '@/components/donation-card';
 import { mockDonations, mockFoodCategories } from '@/lib/data';
 import type { FoodCategory } from '@/lib/types';
@@ -91,7 +91,7 @@ export default function LiveMapPage() {
       
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2">
-          <MapPlaceholder />
+          <GoogleMap />
         </div>
         
         <div className="max-h-[calc(100vh-20rem)] space-y-4 overflow-y-auto lg:col-span-1">
