@@ -31,7 +31,7 @@ NourishNet is a food donation and redistribution platform that connects food don
 - npm (v9+) or yarn (v1.22+)
 - Git 2.25.0 or later
 
-The Next.js source code resides in `Frontend/`. The primary `package.json` is in `Backend/`, so run `npm` commands from there.
+The Next.js source code resides in `Frontend/`, which contains its own `package.json`. Run `npm` commands from inside this directory.
 
 ### Installation
 
@@ -62,13 +62,13 @@ an `annotations.json` file describing each image. After training, a scripted mod
 In production the API flow invokes `cv-model/predict.py` to analyze uploaded images and returns structured
 data like `{ "foodType": "carrots", "estimatedWeightKg": 2.0, "spoilageDetected": false, "packagingOk": true }`.
 
-2. **Change into the `Backend` directory**
+2. **Change into the `Frontend` directory**
 
    ```bash
-   cd Backend
+   cd Frontend
    ```
 
-3. **Install dependencies** (run inside `Backend`)
+3. **Install dependencies** (run inside `Frontend`)
    
    ```bash
    npm install
@@ -94,7 +94,7 @@ data like `{ "foodType": "carrots", "estimatedWeightKg": 2.0, "spoilageDetected"
    NEXTAUTH_URL=http://localhost:3000
    ```
 
-5. **Run the development server** (from `Backend`)
+5. **Run the development server** (from `Frontend`)
 
    ```bash
    npm run dev
